@@ -8,13 +8,10 @@ function loadRuler(htmlFile, containerId) {
     .catch((err) => console.error("Erro ao carregar", htmlFile, err));
 }
 
-loadRuler("../html/interval-scale.html", "intervalScaleContainer");
-loadRuler(
-  "../html/pentatonic-minor-scale.html",
-  "pentatonicMinorScaleContainer"
-);
-loadRuler("../html/minor-scale.html", "minorScaleContainer");
-loadRuler("../html/major-scale.html", "majorScaleContainer");
-loadRuler("../html/triad-minor-5d-scale.html", "triadMinor5dScaleContainer");
-loadRuler("../html/triad-minor-scale.html", "triadMinorScaleContainer");
-loadRuler("../html/triad-major-scale.html", "triadMajorScaleContainer");
+loadRuler("html/interval-scale.html", "intervalScaleContainer");
+loadRuler("html/pentatonic-minor-scale.html", "pentatonicMinorScaleContainer");
+loadRuler("html/minor-scale.html", "minorScaleContainer");
+loadRuler("html/major-scale.html", "majorScaleContainer");
+loadRuler("html/triad-minor-5d-scale.html", "triadMinor5dScaleContainer");
+loadRuler("html/triad-minor-scale.html", "triadMinorScaleContainer");
+loadRuler("html/triad-major-scale.html", "triadMajorScaleContainer");
