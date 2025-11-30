@@ -1,3 +1,26 @@
+const notesIds = [
+  "note-cs",
+  "note-ds",
+  "note-fs",
+  "note-gs",
+  "note-as",
+  "note-cs-1",
+  "note-c",
+  "note-d",
+  "note-e",
+  "note-f",
+  "note-g",
+  "note-a",
+  "note-b",
+  "note-c-1",
+  "note-db",
+  "note-eb",
+  "note-gb",
+  "note-ab",
+  "note-bb",
+  "note-db-1",
+];
+
 const initScaleLogic = (id) => {
   const container = document.getElementById(id);
   const intervalScale = container.querySelector(".interval-scale");
@@ -28,7 +51,6 @@ const initScaleLogic = (id) => {
     intervalScale.style.transform = `translateX(${currentX}px)`;
   };
 
-  // Mouse events
   intervalScale.addEventListener("mousedown", (e) => {
     isDragging = true;
     intervalScale.classList.add("dragging");
@@ -58,7 +80,6 @@ const initScaleLogic = (id) => {
     applyTransform(nextX);
   });
 
-  // Touch events
   intervalScale.addEventListener("touchstart", (e) => {
     isDragging = true;
     const touch = e.touches[0];
@@ -82,10 +103,18 @@ const initScaleLogic = (id) => {
     applyTransform(nextX);
   });
 
-  // Reset
   if (resetBtn) {
     resetBtn.addEventListener("click", () => applyTransform(0));
   }
+
+  notesIds.forEach((noteId) => {
+    const noteElement = notesScale.querySelector(`#${noteId}`);
+    if (noteElement) {
+      noteElement.addEventListener("click", () => {
+        intervalScale.style.transform = `translateX(${noteElement.offsetLeft}px)`;
+      });
+    }
+  });
 
   intervalScale.addEventListener("selectstart", (e) => {
     if (isDragging) e.preventDefault();

@@ -29,7 +29,6 @@ h1 {
 }
 
 .scales-wrapper {
-  position: relative;
   overflow-x: auto;
   padding-bottom: 20px;
 }

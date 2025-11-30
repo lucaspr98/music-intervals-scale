@@ -1,5 +1,4 @@
 .interval-scale {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 60px);
   grid-template-rows: 50px 50px;
@@ -7,20 +6,10 @@
   user-select: none;
   margin-bottom: 30px;
   width: fit-content;
-  gap: 0;
 }
 
 .interval-scale.dragging {
   cursor: grabbing;
-}
-
-.interval-scale::before {
-  position: absolute;
-  left: 0;
-  top: -25px;
-  font-size: 14px;
-  color: #666;
-  font-weight: bold;
 }
 
 .interval-box {
@@ -35,23 +24,19 @@
   font-size: 14px;
 }
 
-/* Top row intervals */
 .interval-box.row-0 {
   grid-row: 1;
   border-bottom: 2px solid #333;
 }
 
-/* Bottom row intervals */
 .interval-box.row-1 {
   grid-row: 2;
 }
 
-/* Right border for last column */
 .interval-box.last-col {
   border-right: 2px solid #333;
 }
 
-/* Right border for last column */
 .interval-box.first-col {
   border-left: 2px solid #333;
 }
@@ -61,7 +46,6 @@
   border-bottom: 0;
 }
 
-/* Specific grid positions for intervals */
 .interval-T {
   grid-column: 1;
   grid-row: 2;
@@ -111,30 +95,27 @@
   grid-row: 2;
 }
 
-/* Top row special intervals */
 .interval-4d {
   grid-column: 5;
   grid-row: 1;
-} /* above 3M */
+}
 .interval-4s {
   grid-column: 7;
   grid-row: 1;
-} /* above 5d */
+}
 .interval-5s {
   grid-column: 9;
   grid-row: 1;
-} /* above 6m */
+}
 .interval-7d {
   grid-column: 10;
   grid-row: 1;
-} /* above 6M */
+}
 
-/* Notes Scale (fixed) */
 .notes-scale {
   display: grid;
   grid-template-columns: repeat(25, 60px);
   grid-template-rows: 50px 50px 50px;
-  position: relative;
   gap: 0;
 }
 
@@ -148,38 +129,41 @@
   background: white;
   font-weight: bold;
   font-size: 14px;
-  position: relative;
-  aspect-ratio: 1 / 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/* Natural notes - middle row */
 .note-box.natural {
   grid-row: 2;
   background-color: white;
 }
 
-/* Sharp notes - top row */
 .note-box.sharp {
   grid-row: 1;
   border: 2px solid #ff6b6b;
   font-size: 14px;
 }
 
-/* Flat notes - bottom row */
 .note-box.flat {
   grid-row: 3;
   border: 2px solid #d4a017;
   font-size: 14px;
 }
 
-/* Right border for last column */
 .note-box[style*="grid-column: 25"] {
   border-right: 2px solid #333;
 }
 
-.instructions h3 {
-  margin-bottom: 10px;
-  color: #1976d2;
+.note-box.clickable {
+  cursor: pointer;
+}
+
+.note-box.clickable:hover {
+  background-color: #e0f7fa;
 }
 
 .reset-btn {
@@ -199,7 +183,6 @@
   background: #1976d2;
 }
 
-/* Empty cells (if needed later) */
 .empty-cell {
   background: transparent;
   border: none;
