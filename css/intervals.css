@@ -6,6 +6,7 @@
   user-select: none;
   margin-bottom: 30px;
   width: fit-content;
+  color: black;
 }
 
 .interval-scale.dragging {
@@ -117,6 +118,7 @@
   grid-template-columns: repeat(25, 60px);
   grid-template-rows: 50px 50px 50px;
   gap: 0;
+  color: black;
 }
 
 .note-box {
