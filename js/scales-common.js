@@ -21,11 +21,13 @@ const notesIds = [
   "note-db-1",
 ];
 
-const initScaleLogic = (id) => {
+const initScaleLogic = (id, resetBtnId) => {
   const container = document.getElementById(id);
   const intervalScale = container.querySelector(".interval-scale");
   const notesScale = container.querySelector(".notes-scale");
-  const resetBtn = container.querySelector(".reset-btn");
+  const resetBtn = resetBtnId
+    ? document.getElementById(resetBtnId)
+    : container.querySelector(".reset-btn");
 
   let isDragging = false;
   let startX = 0;

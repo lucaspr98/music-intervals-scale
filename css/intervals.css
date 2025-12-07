@@ -4,7 +4,7 @@
   grid-template-rows: 50px 50px;
   cursor: grab;
   user-select: none;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   width: fit-content;
   color: black;
 }
@@ -119,6 +119,7 @@
   grid-template-rows: 50px 50px 50px;
   gap: 0;
   color: black;
+  margin-bottom: 24px;
 }
 
 .note-box {
@@ -169,20 +170,19 @@
 }
 
 .reset-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 30px;
-  background: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 8px;
+  background-color: var(--bg-secondary);
+  border: solid 2px var(--border-color);
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s;
+  white-space: nowrap;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .reset-btn:hover {
-  background: #1976d2;
+  background-color: var(--text-primary);
 }
 
 .empty-cell {

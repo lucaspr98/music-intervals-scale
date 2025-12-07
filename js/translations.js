@@ -10,7 +10,6 @@ const translations = {
     triadMinor5d: "Tríade Menor com Quinta Diminuta",
     triadMinor: "Tríade Menor",
     triadMajor: "Tríade Maior",
-    resetBtn: "Reiniciar",
   },
   en: {
     title: "Interval Ruler",
@@ -23,7 +22,6 @@ const translations = {
     triadMinor5d: "Diminished Triad",
     triadMinor: "Minor Triad",
     triadMajor: "Major Triad",
-    resetBtn: "Reset",
   },
 };
 
