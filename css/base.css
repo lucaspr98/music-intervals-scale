@@ -60,10 +60,17 @@ h1 {
   position: relative;
 }
 
-.theme-toggle {
+.toggles-container {
   position: fixed;
   top: 20px;
   right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+  flex-direction: row;
+}
+
+.toggle {
   padding: 10px 15px;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -75,7 +82,7 @@ h1 {
   z-index: 1000;
 }
 
-.theme-toggle:hover {
+.toggle:hover {
   background-color: var(--text-primary);
   color: var(--bg-secondary);
 }

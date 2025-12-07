@@ -8,34 +8,42 @@
     <link rel="stylesheet" href="css/intervals.css" />
   </head>
   <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    <div class="toggles-container">
+      <button id="language-toggle" class="toggle" onclick="toggleLanguage()">
+        🇧🇷
+      </button>
+      <button id="theme-toggle" class="toggle" onclick="toggleTheme()">
+        🌙
+      </button>
+    </div>
     <div class="container">
-      <h1>Régua de Intervalos</h1>
+      <h1 data-i18n="intervalsTitle">Régua de Intervalos</h1>
       <div id="intervalScaleContainer"></div>
     </div>
 
     <div class="container">
-      <h1>Régua de Escalas</h1>
-      <h2>Pentatônica Menor</h2>
+      <h1 data-i18n="scalesTitle">Régua de Escalas</h1>
+      <h2 data-i18n="pentatonicMinor">Pentatônica Menor</h2>
       <div id="pentatonicMinorScaleContainer"></div>
-      <h2>Escala Menor</h2>
+      <h2 data-i18n="minorScale">Escala Menor</h2>
       <div id="minorScaleContainer"></div>
-      <h2>Escala Maior</h2>
+      <h2 data-i18n="majorScale">Escala Maior</h2>
       <div id="majorScaleContainer"></div>
     </div>
 
     <div class="container">
-      <h1>Régua de Tríades</h1>
-      <h2>Tríade Menor com Quinta Diminuta</h2>
+      <h1 data-i18n="triadsTitle">Régua de Tríades</h1>
+      <h2 data-i18n="triadMinor5d">Tríade Menor com Quinta Diminuta</h2>
       <div id="triadMinor5dScaleContainer"></div>
-      <h2>Tríade Menor</h2>
+      <h2 data-i18n="triadMinor">Tríade Menor</h2>
       <div id="triadMinorScaleContainer"></div>
-      <h2>Tríade Maior</h2>
+      <h2 data-i18n="triadMajor">Tríade Maior</h2>
       <div id="triadMajorScaleContainer"></div>
     </div>
 
     <script src="js/scales-common.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/translations.js"></script>
   </body>
 </html>

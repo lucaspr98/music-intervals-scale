@@ -15,9 +15,9 @@ const toggleTheme = () => {
 };
 
 const updateToggleButton = (theme) => {
-  const btn = document.querySelector(".theme-toggle");
+  const btn = document.querySelector("#theme-toggle");
   if (btn) {
-    btn.textContent = theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode";
+    btn.textContent = theme === "light" ? "🌙" : "☀️";
   }
 };
 
